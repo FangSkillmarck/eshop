@@ -10,8 +10,8 @@ namespace Apoteket.UppgiftBE.Web.Context
 {
     public class ProductDbContext : DbContext
     {
-        public DbSet<Product> Products { get; set; }
+        public IDbSet<Product> Products { get; set; }
 
-        public DbSet<Basket>  Baskets { get; set; }
+        public IDbSet<Basket>  Baskets { get; set; }
      }
 }

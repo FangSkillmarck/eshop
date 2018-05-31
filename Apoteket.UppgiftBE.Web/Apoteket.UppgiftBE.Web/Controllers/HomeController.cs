@@ -17,10 +17,7 @@ namespace Apoteket.UppgiftBE.Web.Controllers
 		    return View(products);
    
 		}
-	} //          public HomeController(IProductList productList)
-		//{
-		//	_productList = productList;
-		//}
+	} 
 
 }//         // Lista de produkter som finns i _productList
    //         var headercoll = Request.Headers;
