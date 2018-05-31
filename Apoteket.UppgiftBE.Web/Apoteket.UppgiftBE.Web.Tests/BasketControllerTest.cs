@@ -70,15 +70,12 @@ namespace Apoteket.UppgiftBE.Web.Tests
             Assert.AreEqual(string.Empty, result.ViewName);
         }
 
-        [TestMethod]  
-        public void TestBasketContrllersDetailsRedirect()
+        [TestMethod]
+        public void TestBasketContrllorDetailsRedirect()
         {
-            var productController = new ProductController();
-            var result = (RedirectToRouteResult)productController.Details(-1);
+            var basketController = new BasketController();
+            var result = (RedirectToRouteResult)basketController.Details(-1);
             Assert.AreEqual("Index", result.RouteValues["action"]);
         }
-
-
-
     }
 }

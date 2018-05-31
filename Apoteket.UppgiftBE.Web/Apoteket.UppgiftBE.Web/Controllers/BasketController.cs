@@ -22,8 +22,6 @@ namespace Apoteket.UppgiftBE.Web.Controllers
             return View(baskets);
         }
 
-       
-
         // GET: Basket/Details/5
         public ActionResult Details(int? id)
         {
