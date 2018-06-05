@@ -25,7 +25,6 @@ namespace Apoteket.UppgiftBE.Web.Controllers
             var totalPrice = db.Products.Sum(p => p.Price);
 
             return View(products);
-
         }
     }
 

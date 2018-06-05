@@ -1,7 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using System.Collections.Generic;
-using System.Linq;
 using Apoteket.UppgiftBE.Web.Controllers;
 using Apoteket.UppgiftBE.Web.Data;
 using Apoteket.UppgiftBE.Web.Models;
@@ -59,6 +57,29 @@ namespace Apoteket.UppgiftBE.Web.Tests
         // public void MyTestCleanup() { }
         //
         #endregion
+
+        [TestMethod]
+        public void GetAllProducts_ShouldReturnAllProducts()
+        {
+            var testProducts = GetAllProducts();
+            var productController = new ProductController();
+
+            var result = productController.OrderByName();
+
+            //Assert.AreEqual("Details", result.ViewName);
+        }
+
+        private List<Product> GetAllProducts()
+        {
+            var products = new List<Product>
+            {
+                new Product() {Id = 1, Name = "Kaffe",  Price = 5},
+                new Product() {Id = 2, Name = "Kaffe1", Price = 5},
+                new Product() {Id = 3, Name = "Kaffe2", Price = 5}
+            };
+            return products;
+        }
+
 
         [TestMethod]
         public void TestProductControllerDetailsView()

@@ -1,7 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using System.Collections.Generic;
-using System.Linq;
 using Apoteket.UppgiftBE.Web.Controllers;
 using Apoteket.UppgiftBE.Web.Data;
 using Apoteket.UppgiftBE.Web.Models;
@@ -68,7 +66,7 @@ namespace Apoteket.UppgiftBE.Web.Tests
             //Act
             var result = homeController.Index() as ViewResult;
             //Assert
-            //Assert.IsNotNull(result);
+           Assert.IsNotNull(result);
            Assert.AreEqual("Index", result.ViewName);
         }
 

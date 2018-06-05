@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 using Apoteket.UppgiftBE.Web.Context;
-using Apoteket.UppgiftBE.Web.Controllers;
 using Apoteket.UppgiftBE.Web.Models;
 
 namespace Apoteket.UppgiftBE.Web.Controllers

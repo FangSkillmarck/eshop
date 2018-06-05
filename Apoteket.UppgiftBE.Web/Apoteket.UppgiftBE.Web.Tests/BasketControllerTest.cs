@@ -60,6 +60,19 @@ namespace Apoteket.UppgiftBE.Web.Tests
         //
         #endregion
 
+
+        [TestMethod]
+        public void BasketControllerIndexView()
+        {
+            //Arrange
+            var basketController = new BasketController();
+            //Act
+            var result = basketController.Index() as ViewResult;
+            //Assert
+            Assert.IsNotNull(result);
+        //    Assert.AreEqual("Index", result.ViewName);
+        }
+
         [TestMethod] //Test the call of return view(), no args passed to the View function.
         public void TestCreateGetForBasketController()
         {
