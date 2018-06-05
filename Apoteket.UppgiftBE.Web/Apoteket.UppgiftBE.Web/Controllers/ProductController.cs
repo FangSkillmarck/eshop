@@ -20,6 +20,7 @@ namespace Apoteket.UppgiftBE.Web.Controllers
         public ActionResult Index()
         {
             var products = db.Products.ToList();
+
             if (products == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -44,13 +45,13 @@ namespace Apoteket.UppgiftBE.Web.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             if (id < 1) return RedirectToAction("Index");
-           
+
             Product product = db.Products.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
             }
-
+          //  var product = new Product(id, "Kaffe");
             return View("Details",product);
         }
 

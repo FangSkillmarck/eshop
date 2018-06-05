@@ -61,19 +61,33 @@ namespace Apoteket.UppgiftBE.Web.Tests
         #endregion
 
         [TestMethod]
-        public void TestDetailsView()
+        public void TestProductControllerDetailsView()
         {
+            var products = new List<Product>
+            {
+                new Product() {Id = 1, Name = "Kaffe",  Price = 5},
+                new Product() {Id = 2, Name = "Kaffe1", Price = 5},
+                new Product() {Id = 3, Name = "Kaffe2", Price = 5}
+            };
             var productController = new ProductController();
             var result = productController.Details(1) as ViewResult;
             Assert.AreEqual("Details", result.ViewName);
         }
 
+        public void TestProductControllerDetailsViewDataOriginalSQL()
+        {
+            var controller = new ProductController();
+            var result = controller.Details(1) as ViewResult;
+            var product = (Product)result.ViewData.Model;
+            Assert.AreEqual("Kaffe", product.Name);
+        }
+
         [TestMethod]
-        public void TestDetailsViewData()
+        public void TestProductControllerDetailsViewData()
         {
             var products = new List<Product>
             {
-                new Product() {Id = 1, Name = "Kaffe", Price = 5},
+                new Product() {Id = 1, Name = "Kaffe",  Price = 5},
                 new Product() {Id = 2, Name = "Kaffe1", Price = 5},
                 new Product() {Id = 3, Name = "Kaffe2", Price = 5}
             };
@@ -94,19 +108,20 @@ namespace Apoteket.UppgiftBE.Web.Tests
                 new Product() {Id = 2, Name = "Kaffe1", Price = 5},
                 new Product() {Id = 3, Name = "Kaffe2", Price = 5}
             };
+
             var productRepository = new Mock<IProductList>();
             productRepository.Setup(e => e.Get()).Returns(products);
             var controller = new ProductController();
             // Act 
             var result = controller.Index() as ViewResult;
-            
+
             // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual("Product", result.Model.GetType().ToString());
         }
 
         [TestMethod]
-        public void TestDetailsRedirect()
+        public void TestProductControllerDetailsRedirect()
         {
             var productController = new ProductController();
             var result = (RedirectToRouteResult)productController.Details(-1);
