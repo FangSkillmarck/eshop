@@ -66,7 +66,7 @@ namespace Apoteket.UppgiftBE.Web.Tests
 
             var result = productController.OrderByName();
 
-            //Assert.AreEqual("Details", result.ViewName);
+            Assert.IsInstanceOfType(result, typeof(ViewResult));
         }
 
         private List<Product> GetAllProducts()

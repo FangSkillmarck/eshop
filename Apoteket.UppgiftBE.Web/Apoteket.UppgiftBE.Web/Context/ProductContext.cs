@@ -8,7 +8,7 @@ using Apoteket.UppgiftBE.Web.Models;
 
 namespace Apoteket.UppgiftBE.Web.Context
 {
-    public class ProductDbContext : DbContext, IrealtimeContext
+    public class ProductDbContext : DbContext
     {
         public ProductDbContext()
         {
@@ -18,14 +18,28 @@ namespace Apoteket.UppgiftBE.Web.Context
         //{
         //    return new ProductDbContext();
         //}
-        public IDbSet<Product> Products { get; set; }
-        public IDbSet<Basket>  Baskets { get; set; }
-     }
-
-    public interface IrealtimeContext
-    {
-         IDbSet<Product> Products { get; set; }
-         IDbSet<Basket> Baskets { get; set; }
-        int SaveChanges();
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
     }
+
+    //public class ProductDbContext : DbContext, IrealtimeContext
+    //{
+    //    public ProductDbContext()
+    //    {
+    //    }
+
+    //    //public static ProductDbContext Create()
+    //    //{
+    //    //    return new ProductDbContext();
+    //    //}
+    //    public IDbSet<Product> Products { get; set; }
+    //    public IDbSet<Basket>  Baskets { get; set; }
+    // }
+
+    //public interface IrealtimeContext
+    //{
+    //     IDbSet<Product> Products { get; set; }
+    //     IDbSet<Basket> Baskets { get; set; }
+    //    int SaveChanges();
+    //}
 }

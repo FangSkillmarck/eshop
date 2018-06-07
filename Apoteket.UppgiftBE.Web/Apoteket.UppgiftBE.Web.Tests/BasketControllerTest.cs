@@ -70,7 +70,7 @@ namespace Apoteket.UppgiftBE.Web.Tests
             var result = basketController.Index() as ViewResult;
             //Assert
             Assert.IsNotNull(result);
-        //    Assert.AreEqual("Index", result.ViewName);
+            Assert.AreEqual(String.Empty, result.ViewName);
         }
 
         [TestMethod] //Test the call of return view(), no args passed to the View function.

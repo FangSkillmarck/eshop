@@ -7,15 +7,15 @@ namespace Apoteket.UppgiftBE.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IrealtimeContext db;
-        //private ProductDbContext db = new ProductDbContext();
+       // private readonly IrealtimeContext db;
+        private ProductDbContext db = new ProductDbContext();
 
         public HomeController()
         {
             db = new ProductDbContext();
         }
 
-        public HomeController(IrealtimeContext context)
+        public HomeController(ProductDbContext context)
         {
             db = context;
         }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apoteket.UppgiftBE.Web.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonWebService", "JsonWebService\JsonWebService.csproj", "{7851DCBF-C1C7-4242-9A1A-18A1DA88C4E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{ED7068B6-1E54-4EF7-8D9E-6C9CB5F2F77D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7851DCBF-C1C7-4242-9A1A-18A1DA88C4E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7851DCBF-C1C7-4242-9A1A-18A1DA88C4E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7851DCBF-C1C7-4242-9A1A-18A1DA88C4E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7068B6-1E54-4EF7-8D9E-6C9CB5F2F77D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7068B6-1E54-4EF7-8D9E-6C9CB5F2F77D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7068B6-1E54-4EF7-8D9E-6C9CB5F2F77D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7068B6-1E54-4EF7-8D9E-6C9CB5F2F77D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
